@@ -51,13 +51,15 @@ def load_errors():
 print ("What are the most popular three articles of all time?")
 for index, each_article in enumerate(most_popular_articles()):
     print (
-        index+1, "-", each_article[0],
+        "\t", index+1, "-", each_article[0],
         "\t - ", str(each_article[1]), "views")
 
 print ("Who are the most popular article authors of all time?")
 for index, each_author in enumerate(most_popular_authors()):
-    print (index+1, "-", each_author[0], "\t\t - ", each_author[1], "views")
+    print (
+        "\t", index+1, "-", each_author[0], 
+        "\t\t - ", each_author[1], "views")
 
 print ("On which days did more than 1% of requests lead to errors?")
 for each_day in load_errors():
-    print (each_day[0], "-", str(each_day[1]) + "% errors")
+    print ("\t", each_day[0], "-", str(each_day[1]) + "% errors")
